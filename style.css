@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    /* указывается прогресс в процентах */
+    --percent-progress: 30%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: #5e5e5e;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #3579F5;
+    width: 743px;
+    height: 91px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 18px 0px 22px;
+}
+
+.checkList {
+    display: flex;
+    align-items: center;
+}
+
+.checkList_progresBar {
+    position: relative;
+    width: 76px;
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkList_progresBar svg {
+    width: 100%;
+    height: 100%;
+}
+
+.checkList_progresBar svg circle {
+    stroke: #9abcfa;
+    stroke-width: 1px;
+}
+
+.checkList_progresBar svg circle:nth-child(2) {
+    stroke: #FFFFFF;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-dasharray: 190;
+    stroke-dashoffset: calc(190px - (var(--percent-progress) * 2.5));
+    transform-origin: 50%;
+    transform: rotate(-90deg);
+}
+
+.checkList_number {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.checkList_header {
+    background-color: #2364DB;
+    border-radius: 40px;
+    max-width: max-content;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0px 13px;
+}
+
+.checkList_info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.checkList_progress-info {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.checkList_next-action {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+button {
+    color: #4777ED;
+    padding: 10px 32px;
+    background-color: #F4F8FF;
+    border: none;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+}
