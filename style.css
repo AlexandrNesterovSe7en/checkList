@@ -61,7 +61,7 @@ body {
     stroke-width: 2px;
     stroke-linecap: round;
     stroke-dasharray: 190;
-    stroke-dashoffset: calc(190px - (var(--percent-progress) * 2.5));
+    stroke-dashoffset: calc(190px - (var(--percent-progress) * 2.065));
     transform-origin: 50%;
     transform: rotate(-90deg);
 }
